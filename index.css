@@ -1,0 +1,22 @@
+body {
+    background-image: url("blackjack.jpg");
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+}
+
+/* #container {
+    margin-right: 300px;
+    margin-top: 300px;
+    border: 1px solid black;
+} */
+
+h1 {
+    color: goldenrod;
+}
+
+#msg-el {
+    font-style: italic;
+}
