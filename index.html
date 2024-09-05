@@ -3,14 +3,14 @@
         <link rel="stylesheet" href="index.css">
         <title>BlackJack App</title>
     </head>
-    <body>
-        <container id="container">
-            <h1>Blackjack</h1>
-            <p id="msg-el">Want to play a round?</p>
-            <button id="btn" onclick="button()">Play Blackjack</button>
-            <p id="cards-el" onclick="button()">Cards:</p>
-            <p id="sum-el" onclick="button()">Sum:</p>
-            <script src="index.js"></script>
-        </container>
+    <body>        
+        <h1>Blackjack</h1>
+        <p id="msg-el">Want to play a round?</p>
+        <p id="cards-el" onclick="play()">Cards:</p>
+        <p id="sum-el" onclick="play()">Sum:</p>
+        <button id="btn" onclick="play()">Play</button>
+        <button onclick="newCard()">New Card</button>
+        <button onclick="restart()">Restart</button>
+        <script src="index.js"></script>
     </body>
 </html>

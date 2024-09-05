@@ -2,16 +2,18 @@ body {
     background-image: url("blackjack.jpg");
     background-size: cover;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: right;
+    text-align: center;
     color: white;
     font-weight: bold;
+    font-size: 1.3em;
+    /* border: 10px solid white; */
 }
 
 /* #container {
-    margin-right: 300px;
-    margin-top: 300px;
-    border: 1px solid black;
-} */
+    /* margin-right: 300px;
+    margin-top: 300px; */
+    /* border: 50px solid white; */
+/* } */ *
 
 h1 {
     color: goldenrod;
@@ -19,4 +21,16 @@ h1 {
 
 #msg-el {
     font-style: italic;
+}
+
+button {
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10% / 50%;
+    border: none;
+    color: #016f32;
+    width: 100px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
