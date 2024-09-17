@@ -1,5 +1,7 @@
-let firstCard = Math.floor(Math.random() * 10) + 2;
-let secondCard = Math.floor(Math.random() * 10) + 2;
+// let firstCard = Math.floor(Math.random() * 10) + 2;
+// let secondCard = Math.floor(Math.random() * 10) + 2;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [  firstCard, secondCard ]
 let sum = firstCard + secondCard;
 
@@ -10,11 +12,20 @@ let msgEl = document.getElementById("msg-el")
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
 
+function getRandomCard() {
+    let randomCard = Math.floor(Math.random() * 10) + 2;
+    return randomCard;
+}
+
 function startGame() {
     play();
 }
 function play() {
-    cardsEl.textContent = "Cards: " + cards[0] + " & " + cards[1];
+    cardsEl.textContent = "Cards: "
+
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "; 
+    }
     sumEl.textContent = "Sum: " + sum; 
     console.log(sum)
     if (sum <= 20) {
@@ -31,8 +42,10 @@ console.log("You are still in the game" + " = " + isAlive)
 }
 
 function newCard() {
-    card = 5;
+    let card = getRandomCard();
     sum += card;
+    cards.push(card)
+    console.log(cards)
     play();
 }
 
