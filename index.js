@@ -1,23 +1,34 @@
 // let firstCard = Math.floor(Math.random() * 10) + 2;
 // let secondCard = Math.floor(Math.random() * 10) + 2;
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [  firstCard, secondCard ]
-let sum = firstCard + secondCard;
+let cards = []
+let sum = 0;
 
 let hasBlackjack = false;
-let isAlive = true
+let isAlive = false
 
 let msgEl = document.getElementById("msg-el")
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
 
 function getRandomCard() {
-    let randomCard = Math.floor(Math.random() * 10) + 2;
-    return randomCard;
+    let randomCard = Math.floor(Math.random() * 13) + 1;
+    console.log(randomCard)
+    if (randomCard === 1) {
+        return 11;
+    } else if (randomCard > 10) {
+        return 10
+    } else {
+        return randomCard;
+    }
 }
 
 function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [  firstCard, secondCard ]
+    sum = firstCard + secondCard
+
     play();
 }
 function play() {
@@ -42,11 +53,13 @@ console.log("You are still in the game" + " = " + isAlive)
 }
 
 function newCard() {
-    let card = getRandomCard();
-    sum += card;
-    cards.push(card)
-    console.log(cards)
-    play();
+    if (isAlive === true && hasBlackjack === false) {
+        let card = getRandomCard();
+        sum += card;
+        cards.push(card)
+        console.log(cards)
+        play();
+    }
 }
 
 // function restart() {
@@ -67,7 +80,6 @@ function newCard() {
 //     console.log("Game over!")
 //     isAlive = false
 // }
-
 
 
 
