@@ -1,5 +1,3 @@
-// let firstCard = Math.floor(Math.random() * 10) + 2;
-// let secondCard = Math.floor(Math.random() * 10) + 2;
 let cards = []
 let sum = 0;
 
@@ -61,7 +59,7 @@ console.log("You are still in the game" + " = " + isAlive)
 }
 
 function newCard() {
-    if (isAlive === true && hasBlackjack === false) {
+    if (isAlive && !hasBlackjack ) {
         let card = getRandomCard();
         sum += card;
         cards.push(card)
@@ -70,24 +68,17 @@ function newCard() {
     }
 }
 
-// function restart() {
-//     msgEl.textContent = "Want to play a round?";
-//     cardsEl.textContent = "Cards:";
-//     sumEl.textContent = "Sum:";
-//     firstCard = 0;
-//     secondCard = 0;
-//     sum = 0;
-// }
-
-// if (sum <= 20) {
-//     console.log("Do you want to draw a new card?")
-// } else if (sum === 21) {
-//     console.log("Wohoo! You've got a Blackjack")
-//     hasBlackjack = true
-// } else {
-//     console.log("Game over!")
-//     isAlive = false
-// }
+function restart() {
+    msgEl.textContent = "Want to play a round?";
+    cardsEl.textContent = "Cards:";
+    sumEl.textContent = "Sum:";
+    firstCard = 0;
+    secondCard = 0;
+    cards = []
+    sum = 0;
+    isAlive = true;
+    hasBlackjack = false;
+}
 
 
 
